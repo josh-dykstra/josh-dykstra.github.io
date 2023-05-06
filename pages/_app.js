@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { Roboto_Mono as RobotoMono } from 'next/font/google';
 
 import Navigation from '../lib/components/navigation';
-import '../styles/globals.css';
-import styles from '../styles/Main.module.css';
+import '../styles/globals.scss';
+import styles from '../styles/Main.module.scss';
 
 const robotoMono = RobotoMono({ subsets: ['latin'] });
 

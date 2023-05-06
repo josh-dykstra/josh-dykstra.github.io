@@ -1,0 +1,20 @@
+@import '_theme.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: $layout-margin-sm;
+
+  @media (min-width: $layout-breakpoints-md) {
+    max-width: $layout-page-container-md;
+    margin: $layout-margin-md;
+  }
+
+  @media (min-width: $layout-breakpoints-lg) {
+    max-width: $layout-page-container-lg;
+    margin: $layout-margin-lg;
+  }
+}
