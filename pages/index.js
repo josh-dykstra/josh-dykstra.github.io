@@ -1,6 +1,4 @@
 /* eslint-disable max-len */
-import classnames from 'classnames';
-
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -9,7 +7,7 @@ export default function Home() {
       <div className={styles.welcomeContainer}>
         <h1 className={styles.title}>Welcome</h1>
         <p className={styles.body}>
-          Thanks for visiting my personal site! Here you'll find a bit more about me,
+          Thanks for visiting my personal site! Here you&rsquo;ll find a bit more about me,
           {' '}
           <b>Josh Dykstra</b>
           , my writings about engineering management and some book recommendations. You can find my latest posts here:
@@ -21,7 +19,7 @@ export default function Home() {
         </div>
         <h2 className={styles.title2}>About me</h2>
         <p className={styles.body}>
-          I live in the Potrero Hill neighborhood of San Francisco with my wife and our cat, Lily. I work as an engineering manager at Airbnb leading a team of engineers working on Airbnb's search product. Outside of work I spend my time discovering new parts of San Francisco, playing basketball, and exploring the great outdoors. If you're interested in connecting, please reach out on
+          I live in the Potrero Hill neighborhood of San Francisco with my wife and our cat, Lily. I work as an engineering manager at Airbnb leading a team of engineers working on Airbnb&rsquo;s search product. Outside of work I spend my time discovering new parts of San Francisco, playing basketball, and exploring the great outdoors. If you&rsquo;re interested in connecting, please reach out on
           {' '}
           <a href="https://www.linkedin.com/in/josh-dykstra/">LinkedIn</a>
           .
