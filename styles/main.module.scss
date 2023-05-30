@@ -7,14 +7,17 @@
   align-items: center;
   min-height: 100%;
   margin: $layout-margin-sm;
+  margin-top: $layout-nav-height-sm;
 
   @media (min-width: $layout-breakpoints-md) {
     max-width: $layout-page-container-md;
     margin: $layout-margin-md;
+    margin-top: $layout-nav-height-md;
   }
 
   @media (min-width: $layout-breakpoints-lg) {
     max-width: $layout-page-container-lg;
     margin: $layout-margin-lg;
+    margin-top: $layout-nav-height-lg;
   }
 }

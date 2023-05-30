@@ -7,8 +7,17 @@ $layout-breakpoints-xl: 1440px;
 $layout-margin-sm: 0 36px;
 $layout-margin-md: 0 auto;
 $layout-margin-lg: 0 auto;
-$layout-page-container-md: 600px;
-$layout-page-container-lg: 800px;
+$layout-page-container-md: 550px;
+$layout-page-container-lg: 700px;
+
+$layout-nav-height-sm: 70px;
+$layout-nav-height-md: 96px;
+$layout-nav-height-lg: 96px;
+
+// Colors
+$color-bg: white;
+$color-border: #ddd;
+$color-border-focus: #333;
 
 // Font
 $font-headline-size: 32px;
@@ -21,8 +30,8 @@ $font-headline2-color: black;
 
 $font-headline-text-align: center;
 
-$font-body-size: 12px;
-$font-body-line-height: 18px;
+$font-body-size: 14px;
+$font-body-line-height: 20px;
 $font-body-color: black;
 $font-body-bold-weight: bolder;
 $font-body-text-align: justify;

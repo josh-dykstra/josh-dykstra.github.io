@@ -1,0 +1,18 @@
+@import '_theme.scss';
+
+.postGrid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+
+
+  @media (min-width: $layout-breakpoints-sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $layout-breakpoints-lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

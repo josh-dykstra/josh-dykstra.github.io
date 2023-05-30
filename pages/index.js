@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
-import styles from '../styles/Home.module.scss';
+import Link from 'next/link';
+import styles from '../styles/home.module.scss';
 
 export default function Home() {
   return (
@@ -10,7 +11,10 @@ export default function Home() {
           Thanks for visiting my personal site! Here you&rsquo;ll find a bit more about me,
           {' '}
           <b>Josh Dykstra</b>
-          , my writings about engineering management and some book recommendations. You can find my latest posts here:
+          , my writings about engineering management and some book recommendations. You can find my latest posts
+          {' '}
+          <Link href="/posts">here</Link>
+          .
         </p>
       </div>
       <div className={styles.aboutContainer}>
