@@ -1,0 +1,27 @@
+@import '_theme.scss';
+@import 'utils.scss';
+
+.container {
+  @include no-select;
+  padding: 16px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+
+  &:focus {
+    border: 1px solid $color-border-focus;
+  }
+}
+
+.thumbnail {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+}
+
+.title {
+  padding-top: 4px;
+}
+
+.date {
+  padding-top: 4px;
+}

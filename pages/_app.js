@@ -6,7 +6,7 @@ import { Roboto_Mono as RobotoMono } from 'next/font/google';
 
 import Navigation from '../lib/components/navigation';
 import '../styles/globals.scss';
-import styles from '../styles/Main.module.scss';
+import styles from '../styles/main.module.scss';
 
 const robotoMono = RobotoMono({ subsets: ['latin'] });
 

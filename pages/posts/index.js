@@ -1,11 +1,20 @@
-import Link from 'next/link';
-
 import { getSortedPostsData } from '../../lib/utils/posts';
+import PostCard from '../../lib/components/postcard';
+
+import styles from '../../styles/posts.module.scss';
 
 export default function index({ posts }) {
   return (
-    <div>
-      {posts.map((post) => (<Link href={`posts/${post.id}`}>{post.title}</Link>))}
+    <div className={styles.postGrid}>
+      {posts.map((post) => (
+        <PostCard
+          date={post.date}
+          href={`posts/${post.id}`}
+          imageUrl={post.thumbnailUrl}
+          key={post.id}
+          title={post.title}
+        />
+      ))}
     </div>
   );
 }
