@@ -1,0 +1,44 @@
+@import '_theme.scss';
+
+.container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 1;
+  background-color: $color-bg;
+  // Make this a nice drop shadow that only shows on scroll
+  // border-bottom: grey 1px solid;
+
+  @media (min-width: $layout-breakpoints-md) {
+    padding: 36px 0;
+  }
+}
+
+
+.navLink {
+  padding: 0px 12px; 
+  font-size: 16px;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: white;
+  transition: all .3s ease-in-out;
+  
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+
+  @media (min-width: $layout-breakpoints-md) {
+    padding: 0 24px;
+  }
+}
+
+.navLinkActive {
+  text-decoration: underline;
+  text-decoration-color: grey;
+}
