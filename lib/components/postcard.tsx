@@ -1,9 +1,15 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 
 import styles from '../../styles/components/postcard.module.scss';
 
-function PostCard(props) {
+type Props = {
+  date: string,
+  href: string,
+  imageUrl: string,
+  title: string,
+};
+
+export default function PostCard(props:Props) {
   const {
     date,
     href,
@@ -25,12 +31,3 @@ function PostCard(props) {
     </Link>
   );
 }
-
-PostCard.propTypes = {
-  date: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
-
-export default PostCard;

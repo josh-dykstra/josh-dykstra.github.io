@@ -1,11 +1,10 @@
 import classnames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 
 import styles from '../../styles/components/navigation.module.scss';
 
-function isActiveRoute(currentRoute, targetRoute) {
+function isActiveRoute(currentRoute: string, targetRoute: string) {
   // Hacky logic that's certain to break :)
   if (targetRoute === '/') {
     return currentRoute === '/';
@@ -14,7 +13,12 @@ function isActiveRoute(currentRoute, targetRoute) {
   return currentRoute.includes(targetRoute);
 }
 
-function NavLink(props) {
+interface NavLinkProps {
+  children: string;
+  href: string;
+}
+
+export function NavLink(props: NavLinkProps) {
   const router = useRouter();
   const { href, children } = props;
 
@@ -40,8 +44,3 @@ export default function Navigation() {
     </nav>
   );
 }
-
-NavLink.propTypes = {
-  children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
-};

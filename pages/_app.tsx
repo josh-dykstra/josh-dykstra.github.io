@@ -1,6 +1,6 @@
+import type { AppProps } from 'next/app';
 import classnames from 'classnames';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 
 import { Roboto_Mono as RobotoMono } from 'next/font/google';
 
@@ -10,7 +10,7 @@ import styles from '../styles/main.module.scss';
 
 const robotoMono = RobotoMono({ subsets: ['latin'] });
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -25,9 +25,3 @@ export default function MyApp({ Component, pageProps }) {
     </>
   );
 }
-
-MyApp.propTypes = {
-  Component: PropTypes.element.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  pageProps: PropTypes.object.isRequired,
-};
