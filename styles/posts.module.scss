@@ -2,10 +2,10 @@
 
 .postGrid {
   display: grid;
-
   grid-template-columns: 1fr;
   column-gap: 16px;
   row-gap: 16px;
+  width: 100%;
 
 
   @media (min-width: $layout-breakpoints-sm) {
@@ -14,5 +14,29 @@
 
   @media (min-width: $layout-breakpoints-lg) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.title {
+  @include font-headline;
+  margin-bottom: 12px;
+}
+
+.date {
+  @include font-headline2;
+  margin-bottom: 12px;
+}
+
+.body {
+  @include font-body;
+  width: 100%;
+  margin-top: 16px;
+
+  h3 {
+    @include font-headline3;
+  }
+
+  p {
+    margin-bottom: 16px;
   }
 }
