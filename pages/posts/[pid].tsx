@@ -1,10 +1,15 @@
-import PropTypes from 'prop-types';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
 import { getSortedPostsData, getPost } from '../../lib/utils/posts';
+import { Post } from '../../lib/types';
 
 import styles from '../../styles/posts.module.scss';
 
-export default function Post({ post }) {
+type Props = {
+  post: Post;
+};
+
+export default function PostContent({ post }: Props) {
   return (
     <>
       <h1 className={styles.title}>{post.title}</h1>
@@ -15,15 +20,7 @@ export default function Post({ post }) {
   );
 }
 
-Post.propTypes = {
-  post: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getSortedPostsData();
 
   const paths = posts.map((post) => ({
@@ -31,13 +28,15 @@ export async function getStaticPaths() {
   }));
 
   return { paths, fallback: false };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params || Array.isArray(params.pid) || !params.pid) return { props: {} };
+
   const post = getPost(params.pid);
   return {
     props: {
       post,
     },
   };
-}
+};
