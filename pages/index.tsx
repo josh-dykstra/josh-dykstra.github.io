@@ -10,7 +10,8 @@ export default function Home() {
         <p className={styles.body}>
           Thanks for visiting my personal site! Here you&rsquo;ll find a bit more about me,
           {' '}
-          <b>Josh Dykstra</b>
+          {/* eslint-disable-next-line no-irregular-whitespace */}
+          <b>Josh Dykstra</b>
           , my writings about engineering management and some book recommendations. You can find my latest posts
           {' '}
           <Link href="/posts">here</Link>
