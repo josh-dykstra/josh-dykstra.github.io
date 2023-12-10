@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import classnames from 'classnames';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 import { Roboto_Mono as RobotoMono } from 'next/font/google';
 
@@ -21,6 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Navigation />
         { /* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
+        <Analytics />
       </main>
     </>
   );
